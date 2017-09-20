@@ -1,17 +1,18 @@
 import React from 'react'
 import { render } from 'react-dom'
+import Header from './base/header'
 
-import './static/css/index.scss'
-
-class Hello extends React.Component {
+class Main extends React.Component {
   render() {
     return (
-      <p>hello world</p>
+      <div>
+        <Header/>
+      </div>
     )
   }
 }
 
 render(
-  <Hello/>,
+  <Main/>,
   document.getElementById('root')
 )
