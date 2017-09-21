@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Header from './base/header'
+import Header from 'base/header'
 
 class Main extends React.Component {
   render() {

@@ -3,6 +3,10 @@ var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
+function resolve (dir) {
+  return path.join(__dirname , dir)
+}
+
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.jsx'),
   output: {
@@ -10,7 +14,13 @@ module.exports = {
   },
 
   resolve:{
-    extensions:['', '.js','.jsx']
+    extensions:['', '.js','.jsx'],
+    alias:{
+      'static': resolve('src/static'),
+      'components': resolve('src/components'),
+      'base': resolve('src/base'),
+      'api': resolve('src/api')
+    }
   },
 
   module: {
