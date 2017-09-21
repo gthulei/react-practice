@@ -20,7 +20,8 @@
   "homepage": "https://github.com/gthulei/react-practice#readme",
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-router": "^2.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",

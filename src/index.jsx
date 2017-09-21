@@ -1,18 +1,12 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Header from 'base/header'
+import { hashHistory } from 'react-router'
 
-class Main extends React.Component {
-  render() {
-    return (
-      <div>
-        <Header/>
-      </div>
-    )
-  }
-}
+import RouteMap from './router/routeMap'
+
+import 'static/css/index.scss'
 
 render(
-  <Main/>,
+  <RouteMap history={hashHistory}/>,
   document.getElementById('root')
 )
