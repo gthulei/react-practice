@@ -16,7 +16,7 @@ class RouterMap extends React.Component {
         <Route path='/' component={App}>
           <IndexRoute component={Home}/>
           <Route path='/city' component={City}/>
-          <Route path='/produce' component={Produce}/>
+          <Route path='/produce/:id' component={Produce}/>
           <Route path='/produce-detail' component={produceDetail}/>
           <Route path='/userHome' component={UserHome}/>
           <Route path='/login' component={Login}/>

@@ -1,0 +1,17 @@
+
+@import "../../static/css/variable.scss";
+.home-heaer{
+  background-color: #e9203d;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: $color-text;
+  .home-heaer-left{
+    height: 33px;
+    line-height: 33px;
+  }
+  .icon-user{
+    height: 33px;
+    line-height: 33px;
+  }
+}

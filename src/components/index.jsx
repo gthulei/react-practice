@@ -21,11 +21,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        login: true
-      })
-    }, 2000)
+    this.setState({
+      login: true
+    })
   }
 }
 

@@ -1,0 +1,15 @@
+@import "../../static/css/variable.scss";
+.search{
+  display: flex;
+  flex: 1;
+  input{
+    flex: 1;
+    height: 33px;
+    line-height: 33px;
+    border-radius: 40px;
+    margin: 0 10px;
+    padding-left: 10px;
+    color: $color-background;
+    font-size: $font-size-medium;
+  }
+}
