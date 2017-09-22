@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import ReactSwipe from 'react-swipe'
-import './swipe.scss'
+
 class Swipe extends React.Component {
   constructor(props,context) {
     super(props,context);

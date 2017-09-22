@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
-
-let result = function (data,errorCode='0000000',errorMessage='成功') {
+app.use(express.static("./home"));
+let result = function (data,succeed=true,errorCode='0000000',errorMessage='成功') {
   return {
+    "succeed":succeed,
     "errorCode": errorCode,
     "errorMessage": errorMessage,
     "data": data

@@ -1,32 +1,33 @@
+
 module.exports = [
     {
         title: '暑假5折',
-        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191639092-2000037796.png',
-        link: 'http://www.imooc.com/wap/index'
+        img: 'http://localhost:3000/1.png',
+        link: 'http://meishi.meituan.com/i/?ci=10&stid_b=1&cevent=imt%2Fhomepage%2Fcategory1%2F1'
     },
     {
         title: '特价出国',
-        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191648124-298129318.png',
-        link: 'http://www.imooc.com/wap/index'
+        img: 'http://localhost:3000/2.png',
+        link: 'http://meishi.meituan.com/i/?ci=10&stid_b=1&cevent=imt%2Fhomepage%2Fcategory1%2F1'
     },
     {
         title: '亮亮车',
-        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191653983-1962772127.png',
-        link: 'http://www.imooc.com/wap/index'
+        img: 'http://localhost:3000/3.png',
+        link: 'http://meishi.meituan.com/i/?ci=10&stid_b=1&cevent=imt%2Fhomepage%2Fcategory1%2F1'
     },
     {
         title: '学钢琴',
-        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191700420-1584459466.png',
-        link: 'http://www.imooc.com/wap/index'
+        img: 'http://localhost:3000/4.png',
+        link: 'http://meishi.meituan.com/i/?ci=10&stid_b=1&cevent=imt%2Fhomepage%2Fcategory1%2F1'
     },
     {
         title: '电影',
-        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191706733-367929553.png',
-        link: 'http://www.imooc.com/wap/index'
+        img: 'http://localhost:3000/5.png',
+        link: 'http://meishi.meituan.com/i/?ci=10&stid_b=1&cevent=imt%2Fhomepage%2Fcategory1%2F1'
     },
     {
         title: '旅游热线',
-        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191713186-495002222.png',
-        link: 'http://www.imooc.com/wap/index'
+        img: 'http://localhost:3000/6.png',
+        link: 'http://meishi.meituan.com/i/?ci=10&stid_b=1&cevent=imt%2Fhomepage%2Fcategory1%2F1'
     }
 ]
