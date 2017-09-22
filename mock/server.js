@@ -22,14 +22,8 @@ app.get('/api/homead', (req, res) => {
 const homeListData = require('./home/list.js')
 app.get('/api/homelist/:city/:page', (req, res) => {
   console.log('首页 —— 推荐列表（猜你喜欢）')
-
-  // 参数
-  const params = this.params
-  const paramsCity = params.city
-  const paramsPage = params.page
-
-  console.log('当前城市：' + paramsCity)
-  console.log('当前页数：' + paramsPage)
+  console.log('当前城市'+req.params.city);
+  console.log('当前页'+req.params.page);
   res.json(result(homeListData));
 });
 
@@ -39,7 +33,7 @@ app.get('/api/search/:page/:city/:category/:keyword', (req, res) => {
   console.log('搜索结果页 - 搜索结果')
 
   // 参数
-  const params = this.params
+  const params = req.params
   const paramsPage = params.page
   const paramsCity = params.city
   const paramsCategory = params.category
@@ -56,7 +50,7 @@ app.get('/api/search/:page/:city/:category', (req, res) => {
   console.log('搜索结果页 - 搜索结果')
 
   // 参数
-  const params = this.params
+  const params = req.params
   const paramsPage = params.page
   const paramsCity = params.city
   const paramsCategory = params.category
@@ -73,7 +67,7 @@ const detailInfo = require('./detail/info.js')
 app.get('/api/detail/info/:id', (req, res) => {
   console.log('详情页 - 商户信息')
 
-  const params = this.params
+  const params = req.params
   const id = params.id
 
   console.log('商户id: ' + id)
@@ -84,7 +78,7 @@ const detailComment = require('./detail/comment.js')
 app.get('/api/detail/comment/:page/:id', (req, res) => {
   console.log('详情页 - 用户点评')
 
-  const params = this.params
+  const params = req.params
   const page = params.page
   const id = params.id
 
@@ -97,7 +91,7 @@ app.get('/api/detail/comment/:page/:id', (req, res) => {
 const orderList = require('./orderlist/orderList.js')
 app.get('/api/orderlist/:username', (req, res) => {
   console.log('订单列表')
-  const params = this.params
+  const params = req.params
   const username = params.username
   console.log('用户名：' + username)
   res.json(result(orderList))

@@ -12,7 +12,7 @@ class Swipe extends React.Component {
   render() {
     let opt = {
       speed: 400, // 动画过渡
-      auto: 2000,// 3毫秒切换一次
+      auto: 2000,// 2毫秒切换一次
       callback: (index) => {
         this.setState({
           index: index

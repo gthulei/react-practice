@@ -13,16 +13,16 @@ class HomeHeaer extends React.Component {
       <div className='home-heaer'>
         <div className='home-heaer-left'>
           <Link to="/city">
-          <span>
+          <span className='font-14'>
             {this.props.city}
-            <i className='icon-angle-down'></i>
+            <i className='icon-angle-down font-14'></i>
           </span>
           </Link>
         </div>
         <Search enterHandle={this.enterHandle.bind(this)}/>
         <div className='home-heaer-right'>
           <Link to="/userHome">
-            <i className='icon-user'></i>
+            <i className='icon-user font-14'></i>
           </Link>
         </div>
       </div>
