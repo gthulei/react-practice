@@ -66,3 +66,14 @@ body {
 input{
   outline:none;
 }
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clear-fix:after {
+  display: table;
+  content: '';
+  clear: both;
+}

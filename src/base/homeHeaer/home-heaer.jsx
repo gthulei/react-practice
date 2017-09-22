@@ -5,13 +5,16 @@ import Search from 'base/search/search'
 import './home-heaer.scss'
 
 class HomeHeaer extends React.Component {
+  constructor(props,context){
+    super(props,context);
+  }
   render() {
     return (
       <div className='home-heaer'>
         <div className='home-heaer-left'>
           <Link to="/city">
           <span>
-            北京
+            {this.props.city}
             <i className='icon-angle-down'></i>
           </span>
           </Link>
