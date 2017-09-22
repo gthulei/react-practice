@@ -58,6 +58,13 @@ module.exports = {
   ],
 
   devServer: {
+    proxy: {
+      // 凡是 /api 开头的 http 请求，都会被代理到 localhost:3000
+      '/api': {
+        target: 'http://localhost:3000',
+        secure: false
+      }
+    },
     colors: true, //终端中输出结果为彩色
     historyApiFallback: true, //不跳转，在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
     inline: true, //实时刷新
