@@ -7,7 +7,10 @@ class LoadMore extends React.Component {
   render() {
     return (
       <div className='load-more' ref="wrapper">
-        加载中,请稍后...
+        {
+          this.props.loding ? '加载中,请稍后...' : '没有更多了...'
+        }
+
       </div>
     )
   }
@@ -19,6 +22,7 @@ class LoadMore extends React.Component {
      * 当距离顶部的距离小于屏幕的高度就表示在可视区触发加载更多方法
      */
     window.addEventListener('scroll',() => {
+      if(!this.props.loding)return;
       window.clearTimeout(clear);
       clear = window.setTimeout(()=> {
         // 取一屏的高度
@@ -28,7 +32,7 @@ class LoadMore extends React.Component {
         console.log(windowHeight)
         console.log(top)
         if(top<windowHeight){
-          console.log("触发加载更多")
+          this.props.loadMore();
         }
       },300)
     })

@@ -7,7 +7,9 @@ class List extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      data: ''
+      data: '',
+      loding:true,
+      pageNo:0
     }
   }
 
@@ -38,19 +40,29 @@ class List extends React.Component {
             </Link>
           })
         }
-        <LoadMore/>
+        <LoadMore loadMore={this.loadMore.bind(this)} loding={this.state.loding}/>
       </div>
     )
   }
 
   componentDidMount() {
-    getHomeList('北京', 0).then(res => {
+    getHomeList('北京', this.state.pageNo).then(res => {
       if (res.succeed) {
         this.setState({
           data: res.data.data
         });
       }
-      ;
+    }).catch(res => {
+      alert(res)
+    });
+  }
+  loadMore() {
+    getHomeList('北京', ++this.state.pageNo).then(res => {
+      if (res.succeed) {
+        this.setState({
+          data: this.state.data.concat(res.data.data)
+        });
+      }
     }).catch(res => {
       alert(res)
     });
