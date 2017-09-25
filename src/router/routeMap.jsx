@@ -7,7 +7,7 @@ import Produce from 'components/produce/produce'
 import produceDetail from 'components/produce-detail/produce-detail'
 import UserHome from 'components/user-home/user-home'
 import Login from 'components/login/login'
-import NotFound from 'components/notFound/notFound'
+import NotFound from 'components/not-found/notFound'
 
 class RouterMap extends React.Component {
   render() {

@@ -1,7 +1,7 @@
 import React from 'react'
 import {getHomeList} from 'api/home.api'
 import { Link } from 'react-router'
-import LoadMore from 'base/loadMore/loadMore'
+import LoadMore from 'base/load-more/loadMore'
 
 class List extends React.Component {
   constructor(props, context) {
