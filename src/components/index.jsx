@@ -27,9 +27,10 @@ class App extends React.Component {
   componentDidMount() {
     let city = localStorageGet('CIPY');
     if(!city){
-      city = '北京';
+      city = '上海';
       localStorageSet('CIPY',city);
     }
+    // redux 参数设置
     this.props.userinfoActions.update({
       city: city
     })
