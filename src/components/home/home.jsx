@@ -1,5 +1,4 @@
 import React from 'react'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import HomeHeaer from 'base/home-heaer/home-heaer'
 import Swipe from './subpage/swipe'
@@ -11,7 +10,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <HomeHeaer city={this.props.userinfo.test}/>
+        <HomeHeaer city={this.props.userinfo.city}/>
         <Swipe/>
         <Advertising/>
         <List/>

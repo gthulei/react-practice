@@ -1,4 +1,8 @@
 import React from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import * as userinfoActions from 'reduxs/actions/userinfo'
+import {localStorageSet,localStorageGet} from 'util/util'
 
 class App extends React.Component {
   constructor(props, context) {
@@ -21,10 +25,32 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    let city = localStorageGet('CIPY');
+    if(!city){
+      city = '北京';
+      localStorageSet('CIPY',city);
+    }
+    this.props.userinfoActions.update({
+      city: city
+    })
     this.setState({
       login: true
     })
   }
 }
 
-export default App
+
+function mapStateToProps(state) {
+  return {
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    userinfoActions:bindActionCreators(userinfoActions,dispatch)
+  }
+}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App)
