@@ -46,7 +46,7 @@ class List extends React.Component {
   }
 
   componentDidMount() {
-    getHomeList('北京', this.state.pageNo).then(res => {
+    getHomeList(this.props.city, this.state.pageNo).then(res => {
       if (res.succeed) {
         this.setState({
           data: res.data.data
@@ -57,7 +57,7 @@ class List extends React.Component {
     });
   }
   loadMore() {
-    getHomeList('北京', ++this.state.pageNo).then(res => {
+    getHomeList(this.props.city, ++this.state.pageNo).then(res => {
       if (res.succeed) {
         this.setState({
           data: this.state.data.concat(res.data.data)

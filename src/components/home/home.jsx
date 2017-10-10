@@ -13,7 +13,7 @@ class Home extends React.Component {
         <HomeHeaer city={this.props.userinfo.city}/>
         <Swipe/>
         <Advertising/>
-        <List/>
+        <List city={this.props.userinfo.city}/>
       </div>
     )
   }
