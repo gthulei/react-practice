@@ -1,7 +1,7 @@
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import * as userinfoActions from 'reduxs/actions/userinfo'
+import * as userinfoActions from 'reduxs/actions/actions'
 import Header from 'base/header/header'
 import CurrentCity from 'base/current-city/current-city'
 import CityList from './subpage/city-list'

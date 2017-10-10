@@ -9,3 +9,10 @@ export function update(data) {
     data
   }
 }
+
+export function isLogin(data) {
+  return {
+    type: actionTypes.ISLOGIN,
+    data
+  }
+}

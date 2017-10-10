@@ -1,7 +1,7 @@
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import * as userinfoActions from 'reduxs/actions/userinfo'
+import * as userinfoActions from 'reduxs/actions/actions'
 import {localStorageSet,localStorageGet} from 'util/util'
 
 class App extends React.Component {

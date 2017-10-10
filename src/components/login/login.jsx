@@ -1,6 +1,9 @@
 import React from 'react'
 import {hashHistory} from 'react-router'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import Header from 'base/header/header'
+import * as userinfoActions from 'reduxs/actions/actions'
 import {isMobile,isSms} from "util/util";
 import './login.scss'
 class Login extends React.Component {
@@ -104,8 +107,25 @@ class Login extends React.Component {
       return;
     }
     window.clearTimeout(this.state.clearTime);
+    // redux 参数设置
+    this.props.userinfoActions.isLogin({
+      isLogin: true
+    })
     hashHistory.push('/userHome');
   }
 }
 
-export default Login
+function mapStateToProps(state) {
+  return {
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    userinfoActions:bindActionCreators(userinfoActions,dispatch)
+  }
+}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Login)

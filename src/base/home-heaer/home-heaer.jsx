@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link, hashHistory} from 'react-router'
-
+import { connect } from 'react-redux'
 import Search from 'base/search/search'
 import './home-heaer.scss'
 
@@ -33,12 +33,24 @@ class HomeHeaer extends React.Component {
   }
 
   goBack() {
-    if (false){
+    if (this.props.login.isLogin){
       hashHistory.push('/userHome');
     }else {
       hashHistory.push('/login');
     }
   }
 }
+function mapStateToProps(state) {
+  return {
+    login:state.login
+  }
+}
 
-export default HomeHeaer
+function mapDispatchToProps(dispatch) {
+  return {
+  }
+}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HomeHeaer)
