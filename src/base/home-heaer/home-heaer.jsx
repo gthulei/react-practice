@@ -20,10 +20,8 @@ class HomeHeaer extends React.Component {
           </Link>
         </div>
         <Search enterHandle={this.enterHandle.bind(this)}/>
-        <div className='home-heaer-right'>
-          <Link to="/userHome">
+        <div className='home-heaer-right' onClick={this.goBack.bind(this)}>
             <i className='icon-user font-14'></i>
-          </Link>
         </div>
       </div>
     )
@@ -32,6 +30,14 @@ class HomeHeaer extends React.Component {
   enterHandle(value) {
     if(!value)return;
     hashHistory.push(`/produce/${value}`)
+  }
+
+  goBack() {
+    if (false){
+      hashHistory.push('/userHome');
+    }else {
+      hashHistory.push('/login');
+    }
   }
 }
 
