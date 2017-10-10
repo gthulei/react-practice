@@ -12,19 +12,29 @@ class HomeHeaer extends React.Component {
     return (
       <div className='home-heaer'>
         <div className='home-heaer-left'>
-          <Link to="/city">
-          <span className='font-14'>
-            {this.props.city}
-            <i className='icon-angle-down font-14'></i>
-          </span>
-          </Link>
+          {
+            !this.props.isCity ?
+            <Link to="/city">
+            <span className='font-14'>
+              {this.props.city}
+              <i className='icon-angle-down font-14'></i>
+            </span>
+            </Link> :
+              <span className="back-icon" onClick={this.clickHandle.bind(this)}>
+                <i className="icon-chevron-left"></i>
+              </span>
+          }
         </div>
-        <Search enterHandle={this.enterHandle.bind(this)}/>
-        <div className='home-heaer-right' onClick={this.goBack.bind(this)}>
+        <Search enterHandle={this.enterHandle.bind(this)}/>{}
+        <div className={`home-heaer-right ${this.props.isCity ? 'none' : ''}`} onClick={this.goBack.bind(this)}>
             <i className='icon-user font-14'></i>
         </div>
       </div>
     )
+  }
+
+  clickHandle() {
+    window.history.back()
   }
   // 接受子组件参数
   enterHandle(value) {
