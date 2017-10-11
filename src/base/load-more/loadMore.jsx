@@ -8,11 +8,14 @@ class LoadMore extends React.Component {
     return (
       <div className='load-more' ref="wrapper">
         {
-          this.props.loding ? '加载中,请稍后...' : '没有更多了...'
+          this.props.loding ? <span onClick={this.loadMore.bind(this)}>加载更多...</span> : <span>没有更多了...</span>
         }
 
       </div>
     )
+  }
+  loadMore() {
+    this.props.loadMore();
   }
   componentDidMount() {
     let clear = '';
