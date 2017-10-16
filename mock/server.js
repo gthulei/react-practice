@@ -125,4 +125,6 @@ app.post('/api/submitComment', (req, res) => {
 
 })
 
+app.use(express.static("../build"));
+
 app.listen(3000);
